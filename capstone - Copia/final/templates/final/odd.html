@@ -1,0 +1,38 @@
+{% extends "final/layout.html" %} 
+{% load static %}
+{% block title%} Odd one out | Game{%endblock%} 
+{%block body%} 
+<script src="{% static 'final/odd.js' %}"></script>
+<link href="{% static 'final/styles.css'%}" type="text/css" rel="stylesheet">
+
+
+<div class="text-center"style="margin-top:10%  
+    " >
+    <div class="lg"style="display:block" id="check1"></div>
+    
+        <h1 id="b1">Odd one out!</h1>
+        <p class="fst-italic text-center">Choose the odd word! <strong>(Remember to write the number!)</strong></p>
+
+        <div class="position-relative">
+            <br>
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <button id="btn3"style="display:block" onclick="game()" class=" btn btn-primary">Start!</button>
+            </div>
+        </div>
+        
+        <hr id="hrt" style="display:none">
+        <div style="display:none"id="words"></div>
+        
+        <div class="position-relative">
+            <br>
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <input class=""id="input1"style="display:none;"type="text"/>
+            </div>
+        </div>
+</div>
+{%endblock%}
+
+
+{% block script %}
+    <script src="{% static 'odd.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "final/layout.html" %}
+{%load static%}
+{%block title%} All content{%endblock%}
+
+{%block body%} 
+
+<div class="container">
+    <h1 style="margin-top:5%">Here you can find some help with grammar:</</h1>
+    {% for content in contents %} 
+    
+    <li style="font-size:20px"><a href="{% url 'explanation' content.id%}">{{content.title}}</a></li>
+    
+    {%endfor%}
+</div>
+{%endblock%}
