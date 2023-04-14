@@ -1,0 +1,39 @@
+{% extends "final/layout.html" %} 
+{% load static %}
+{% block title%} What are we talking about? | Game{%endblock%} 
+{%block body%} 
+<script src="{% static 'final/topic.js' %}"></script>
+<div class="text-center"style="margin-top:10%  
+    " >
+    <div style="display: block" id="check">
+        <h1 id="hche"></h1>
+    
+    </div >
+        <h1 id="b1">What are we talking about?</h1>
+        <p class="fst-italic text-center">Find the topic! <strong>(Remember to write the first letter as capital!)</strong></p>
+        
+        <div class="position-relative">
+            <br>
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <button id="btn1"style="display:block" onclick="game()" class=" btn btn-primary">Start!</button>
+            </div>
+        </div>
+        
+        <hr id="hG" style="display:none">
+        <div style="display:none"id="div1"></div>
+        <p id="p1"style="display:none"class="fst-italic text-center">We are talking about...</p>
+        
+        <div class="position-relative">
+            <br>
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <input class=""id="input"style="display:none;"type="text"/>
+            </div>
+        </div>
+        
+    </div>
+{%endblock%}
+
+
+{% block script %}
+    <script src="{% static 'topic.js' %}"></script>
+{% endblock %}

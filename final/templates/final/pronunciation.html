@@ -1,0 +1,95 @@
+{% extends "final/layout.html" %} 
+{% load static %}
+{% block title %} Pronunciation {% endblock %}
+{%block body%} 
+
+<div class="text-center">
+    <div class="card-body">
+        <h1>Present simple:</h1>
+        <img class="img-fluid"src="{% static 'final/img/present-simple-file.jpg' %}">
+    </div>
+    <a class="btn btn-secondary" href="{% static 'final/img/present-simple-file.jpg' %}" download target="_blank">Download file</a>
+    <br>
+    <div class="card-body">
+        <h1>Simple past:</h1>
+        <img class="img-fluid"src="{% static 'final/img/simple-past-file.jpg' %}">
+    </div>
+    <a class="btn btn-info" href="{% static 'final/img/simple-past-file.jpg' %}" download target="_blank">Download file</a>
+    <br>
+    <div class="card-body">
+        <h1>Silent letters:</h1>
+        <img class="img-fluid"src="{% static 'final/img/silent-letters-file.png' %}">
+        
+    </div>
+    <a class="btn btn-warning" href="{% static 'final/img/silent-letters-file.png' %}" download target="_blank">Download file</a>
+    <br>
+    <div class="text-center">
+        <h1>Tricky homophones:</h1>
+        <p class="fs-5">Words that are pronounced the same but are spelled<br>differently and have different meanings</p>
+        <div class="row justify-content-center">
+            <div style="border-radius: 25px 0px 0px 25px;background-color:rgba(235, 211, 133, 0.938);"class="col-4">
+                
+                <p>allowed - aloud</p>
+                <p>ate - eight</p>
+                <p>bare - bear</p>
+                <p>be - bee</p>
+                <p>blew - blue</p>
+                <p>board - bored</p>
+                <p>brake - break</p>
+                <p>buy - by - bye</p>
+                <p>cellar - seller</p>
+                <p>cereal - serial</p>
+                <p>coarse - course</p>
+        
+                <p>dear - deer</p>
+                <p>doe - dough</p>
+                <p>fair - fare</p>
+                <p>flea - flee</p>
+                <p>flour - flower</p>
+                <p>foul - fowl</p>
+                <p>hear - here</p>
+                <p>hole - whole</p>
+                <p>hour - our</p>
+            
+        
+        
+        
+                <p>knead - need</p>
+                <p>knot - not</p>
+            </div>
+    
+        <div style="border-radius: 0px 25px 25px 0px;background-color:rgb(123, 199, 136)"class="col-4">
+        <p>know - no</p>
+        <p>lead - led</p>
+        <p>made - maid</p>
+        <p>none - nun</p>
+        <p>one - won</p>
+        <p>pail - pale</p>
+        <p>peace - piece</p>
+        <p>peak - peek</p>
+        <p>plain - plane</p>
+        <p>role - roll</p>
+        <p>sail - sale</p>
+        <p>scene - seen</p>
+        <p>sea - see</p>
+        <p>sole - soul</p>
+        <p>son - sun</p>
+        <p>stair - stare</p>
+        <p>tail - tale</p>
+        <p>threw - through</p>
+        <p>to - too -two</p>
+        <p>weak - week</p>
+        <p>wear - where</p>
+        <p>weather - whether</p>
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+    <a class="btn btn-dark" href="{% static 'final/img/tricky-homophones.jpg' %}" download target="_blank">Download file</a>
+</div>
+
+{% endblock %}

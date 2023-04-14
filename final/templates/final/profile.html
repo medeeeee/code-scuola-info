@@ -1,0 +1,42 @@
+{%extends "final/layout.html" %}
+{%load static %} 
+{%block title %} Profile {%endblock %} 
+{% block body%} 
+
+{% if request.user.username != username%}
+<div  style="margin-top:1%"class="alert alert-danger">
+    {{messa}}
+</div>
+{%else %}
+<div style="margin-top:3%" class="container">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{username}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Lessons saved:</h6>
+            {% for i in mine%}
+                <a href="{% url 'explanation' content_id=i.Content_id%}" class="card-link">{{i.Content.title}}</a>
+            {% endfor%}
+            
+          </div>
+    </div>
+    {% if request.user.username == "admin"%}
+    {%for all in all %}
+    <h3>Messages:</h3>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h6 class="card-title">{{all.email}}</h6>
+            <p class="fst fst-italic">{{all.text}}</p>
+            <form action="{% url 'delete' all.id%}" method="POST">
+                {%csrf_token%}
+                <button type="submit"class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+        
+    </div>
+    {%endfor%}
+    {%endif%}
+
+</div>
+{%endif%}
+{%endblock%}
+
